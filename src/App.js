@@ -16,10 +16,10 @@ const Menu = ()=>{
     return(
         <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
              aria-orientation="vertical">
-            <NavLink className="nav-link" to="profile">Профиль</NavLink>
-            <NavLink className="nav-link" to="message">Сообщения</NavLink>
-            <NavLink className="nav-link" to="settings">Настройки</NavLink>
-            <NavLink className="nav-link" to="friends">Мои друзья</NavLink>
+            <NavLink className="nav-link" to="/users/profile">Профиль</NavLink>
+            <NavLink className="nav-link" to="/users/message">Сообщения</NavLink>
+            <NavLink className="nav-link" to="/users/settings">Настройки</NavLink>
+            <NavLink className="nav-link" to="/users/friends">Мои друзья</NavLink>
         </div>
     )
 }
@@ -33,10 +33,10 @@ const Menu = ()=>{
                             <Menu/>
                         </div>
                         <div className="col-sm-9">
-                                <Route path="/profile" render={()=><Profile function={props.function.key_getUser}/>}/>
-                                <Route path="/message" component={Message}/>
-                                <Route path="/settings" component={Settings}/>
-                                <Route path="/friends" render={()=><Friends function={props.function.key_getUsers}/>}/>
+                                <Route path="/users/profile" render={()=><Profile function={props.function.key_getUser}/>}/>
+                                <Route path="/users/message" component={Message}/>
+                                <Route path="/users/settings" component={Settings}/>
+                                <Route path="/users/friends" render={()=><Friends function={props.function.key_getUsers}/>}/>
                         </div>
                     </div>
                 </BrowserRouter>
